@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio/app/core/navigatior/app_navigator.dart';
 import 'package:portifolio/app/core/services/device_information_service.dart';
 import 'package:portifolio/app/presenter/presenter_resources/animations/package_animations/package_animations.dart';
 
@@ -72,10 +73,16 @@ class _BodySplashPageState extends State<BodySplashPage> {
                     "Tiago Salles",
                     style: TextStyle(
                       color: Colors.black54,
-                      fontWeight: FontWeight.w300,
                       fontSize: widget.screenPermiter * 0.01,
                     ),
                   ),
+                  onEnd: () {
+                    AppNavigator.navigateToNamed(
+                      context,
+                      "/homePage",
+                      NavigationType.pushNamedAndRemoveUntil,
+                    );
+                  },
                 ),
               ),
             ],

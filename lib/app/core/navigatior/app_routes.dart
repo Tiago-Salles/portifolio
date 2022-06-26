@@ -4,7 +4,7 @@ import 'package:portifolio/app/presenter/pages/splash/splash_page.dart';
 
 class AppRoutes {
   static Map<String, Widget Function(BuildContext)> routes = {
-    "/home": (context) => const HomePage(),
+    "/homePage": (context) => const HomePage(),
     "/splashPage": (context) => const SplashPage(),
   };
 }

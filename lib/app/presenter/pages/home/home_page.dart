@@ -10,16 +10,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late double screenPerimeter;
-  @override
-  void initState() {
-    screenPerimeter = DeviceInformationService.screenPerimeter(context);
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
-    return BodyHomePage(
-      screenPermiter: screenPerimeter,
+    screenPerimeter = DeviceInformationService.screenPerimeter(context);
+    return Scaffold(
+      body: BodyHomePage(
+        screenPermiter: screenPerimeter,
+      ),
     );
   }
 }
